@@ -1,8 +1,8 @@
-import { BLACK, WHITE } from '@/helper/colors'
-import { useAppSelector } from '@/redux/hook'
+import { BLACK, PRIMARY, WHITE } from '@/helper/colors'
+// import { useAppSelector } from '@/redux/hook'
 import { MenuPathProps, TRANSLATE } from '@/routes'
 import { Tooltip, Typography, styled } from '@mui/material'
-import { useTranslation } from 'next-i18next'
+// import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
 import { useCallback } from 'react'
 
@@ -21,7 +21,7 @@ export const TooltipCustom = styled(Tooltip)(() => ({
 }))
 
 const MenuItemClose = ({ item }: Props) => {
-  const { t } = useTranslation(TRANSLATE.COMMON)
+  // const { t } = useTranslation(TRANSLATE.COMMON)
   const router = useRouter()
 
   const groupMenuChecked = useCallback(
@@ -42,9 +42,9 @@ const MenuItemClose = ({ item }: Props) => {
 
   const isGroupMenuChecked = groupMenuChecked(item)
 
-  const { firstMainColor: PRIMARY } = useAppSelector(
-    (state) => state.themeColorData
-  )
+  // const { firstMainColor: PRIMARY } = useAppSelector(
+  //   (state) => state.themeColorData
+  // )
 
   return (
     <Tooltip
@@ -56,7 +56,7 @@ const MenuItemClose = ({ item }: Props) => {
               color: isGroupMenuChecked ? PRIMARY : BLACK,
             }}
           >
-            {t(item.name)}
+            {/* {t(item.name)} */}aaaa
           </Typography>
         </div>
       }

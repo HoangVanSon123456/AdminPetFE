@@ -25,5 +25,3 @@ export const listMenuRoutes: MenuPathProps[] = [
     icon: <Dashboard />,
   },
 ];
-
-export const RenderMenu = listMenuRoutes;

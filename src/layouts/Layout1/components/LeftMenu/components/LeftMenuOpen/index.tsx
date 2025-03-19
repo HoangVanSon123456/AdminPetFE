@@ -1,7 +1,5 @@
 import { actionList } from "@/helper/actionList";
-import { findParentWithSubMenu } from "@/helper/checkIsMenuOpen";
 // import { useAppSelector } from "@/redux/hook";
-import { RenderMenu, TRANSLATE } from "@/routes";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Box, Typography } from "@mui/material";
 // import { useTranslation } from "next-i18next";
@@ -10,6 +8,7 @@ import { memo, useState } from "react";
 import { MenuCustom } from "../../../MenuCustom";
 import MenuItemOpen from "./MenuItemOpen";
 import { PRIMARY } from "@/helper/colors";
+import { listMenuRoutes } from "@/routes";
 
 const LeftMenuOpen = () => {
   // const { t } = useTranslation(TRANSLATE.COMMON);
@@ -23,7 +22,7 @@ const LeftMenuOpen = () => {
 
   const [anchorEl, setAnchorEl] = useState<any>(null);
 
-  const [menuList, setMenuList] = useState([]);
+  const [menuList, setMenuList] = useState(listMenuRoutes);
 
   const [titleSubMenu, setTitleSubMenu] = useState("");
 
@@ -50,7 +49,7 @@ const LeftMenuOpen = () => {
           }}
           onClick={(e) => setAnchorEl(e.currentTarget)}
         >
-          {/* {t("btn.add")} */} themdddddddddddddddddddd
+          {/* {t("btn.add")} */} Thêm mới
         </button>
 
         <MenuCustom
@@ -62,10 +61,7 @@ const LeftMenuOpen = () => {
             paper: "w-106",
           }}
           itemList={actionList}
-          onItemAction={(val) => {
-            setAnchorEl(null);
-            router.push(val.path);
-          }}
+          onItemAction={() => {}}
           currentValue={""}
         />
       </div>
@@ -77,10 +73,10 @@ const LeftMenuOpen = () => {
         }}
       >
         {titleSubMenu && (
-          <Box
+          <div
             className="flex gap-2 items-center p-5 cursor-pointer"
             onClick={() => {
-              setMenuList([]);
+              setMenuList(listMenuRoutes);
               setTitleSubMenu("");
             }}
           >
@@ -90,20 +86,20 @@ const LeftMenuOpen = () => {
               }}
             />
             <Typography
-              variant="h6"
+              variant="subtitle1"
               style={{
                 color: PRIMARY,
               }}
             >
-              {/* {t(titleSubMenu)}  */} titleSubMenu
+              {/* {t(titleSubMenu)} */} titleSubMenu
             </Typography>
-          </Box>
+          </div>
         )}
 
         {menuList.map((item, index) => {
           return (
             <MenuItemOpen
-              key={"key" + index}
+              key={index}
               item={item}
               setMenuList={setMenuList}
               setTitleSubMenu={setTitleSubMenu}

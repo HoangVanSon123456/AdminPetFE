@@ -3,7 +3,7 @@ import MuiDrawer from "@mui/material/Drawer";
 import { useRecoilValue } from "recoil";
 import LeftMenuClose from "./components/LeftMenuClose";
 import LeftMenuOpen from "./components/LeftMenuOpen";
-// import { isOpenLeftMenuRecoil } from './recoil'
+import { isOpenLeftMenuRecoil } from "./recoil";
 
 export const drawerWidth: number = 260;
 
@@ -35,29 +35,29 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 const LeftMenu = () => {
-  // const isOpenLeftMenu = useRecoilValue(isOpenLeftMenuRecoil)
+  // const isOpenLeftMenu = useRecoilValue(isOpenLeftMenuRecoil);
 
   return (
     <div
-      className="z-10 scale-100"
+      className="z-10 scale-100 min-w-[250px]"
       style={{
         boxShadow: "5px 0px 8px rgba(0, 0, 0, 0.08)",
       }}
     >
-      <Box position="sticky" top="0px">
-        {/* <Drawer
-          variant='permanent'
+      {/* <Box position="sticky" top="0px" minWidth={200}>
+        <Drawer
+          variant="permanent"
           open={isOpenLeftMenu}
           PaperProps={{
             style: {
-              width: isOpenLeftMenu ? drawerWidth : '50px',
+              width: isOpenLeftMenu ? drawerWidth : "50px",
             },
           }}
         >
           {isOpenLeftMenu ? <LeftMenuOpen /> : <LeftMenuClose />}
-        </Drawer> */}
-        <LeftMenuOpen />
-      </Box>
+        </Drawer>
+      </Box> */}
+      <LeftMenuOpen />
     </div>
   );
 };
