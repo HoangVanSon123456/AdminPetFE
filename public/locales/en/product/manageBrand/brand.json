@@ -1,0 +1,13 @@
+{
+    "brand_code": "Brand code",
+    "brand_name": "Brand name",
+    "description": "Description",
+    "status": "Status",
+    "action": "Actions",
+    "brand_list": "Brand list",
+    "brand_name_placeholder": "Input brand name",
+    "brand_code_placeholder": "Input brand code",
+    "catalog_photo": "Catalog photo",
+    "no_file": "No choosen file",
+    "distributor_name": "Distributor name"
+}

@@ -1,0 +1,18 @@
+{
+  "add_new": "Add new",
+  "cancel": "cancel",
+  "warehouse_management": "warehouse management",
+  "warehouse_list": "warehouse list",
+  "table" : {
+    "no": "No",
+    "code": "Code",
+    "name": "Name",
+    "company": "Company",
+    "org": "Org",
+    "type": "Org",
+    "status": "Status",
+    "action": "Action"
+  },
+  "warehouse_add": "Add warehouse",
+  "warehouse_edit": "Update warehouse"
+}

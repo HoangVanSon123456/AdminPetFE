@@ -1,0 +1,17 @@
+{
+  "product_management": "product management",
+  "update_price": "Update price",
+  "cancel": "Cancel",
+  "come_back":"Come back",
+  "save": "Save",
+  "code":"Code",
+  "inputcode":"Input code",
+  "name":"Name",
+  "inputname":"Input name",
+  "color":"Color", 
+  "order":"Order",
+  "inputorder":"Input order",
+  "inputvalue":"Input value",
+  "inputcolor":"Input color",
+  "confirm_text":"You definitely want to unedit the price variation."
+}

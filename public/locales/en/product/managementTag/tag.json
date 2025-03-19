@@ -1,0 +1,16 @@
+{
+  "delete": "delete",
+  "cancel": "cancel",
+  "edit": "edit",
+  "product_management": "Product management",
+  "tag_list": "tag list",
+  "add_tag": "add tag",
+  "update_tag": "update tag",
+  "delete_tag": "delete tag",
+  "add_new": "add new",
+  "search": "search",
+  "tag_code": "tag code",
+  "tag_name": "tag name",
+  "status": "status",
+  "action": "action"
+}

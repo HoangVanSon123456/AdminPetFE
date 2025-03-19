@@ -1,0 +1,22 @@
+{
+    "page_list": {
+        "page_title": "Warehouse Approve",
+        "search": "Search",
+        "search_placeholder": "Enter keywords",
+        "warehouse_type": "Warehouse type",
+        "warehouse_type_placeholder": "Choose warehouse type",
+        "warehouse_catalog": "Warehouse catalog",
+        "warehouse_catalog_placeholder": "Choose warehouse catalog",
+        "reset": "Reset",
+        "index": "Index",
+        "warehouse_code": "Warehouse code",
+        "warehouse_name": "Warehouse name",
+        "company": "Company",
+        "org": "Org",
+        "action": "Action",
+        "status": "Status",
+        "wait_to_approve": "Wait to Approve",
+        "approved": "Approved",
+        "reject": "Rejected"
+    }
+}
