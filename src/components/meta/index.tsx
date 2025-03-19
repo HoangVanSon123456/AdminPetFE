@@ -1,20 +1,20 @@
-import { HttpResponse } from '@/lib/api'
-import Head from 'next/head'
-import { ReactElement } from 'react'
+import { HttpResponse } from "@/lib/api";
+import Head from "next/head";
+import { ReactElement } from "react";
 
 const defaultMeta = {
-  title: 'Title Default',
+  title: "Title Default",
   headNode: null,
-}
+};
 
 export function Meta<T extends HttpResponse<unknown>>(
   getMeta?: (pageProps: T) => {
-    title?: string
-    headNode?: ReactElement
+    title?: string;
+    headNode?: ReactElement;
   }
 ) {
   return function MetaNode(page: ReactElement, pageProps: T) {
-    const { title, headNode } = { ...defaultMeta, ...getMeta?.(pageProps) }
+    const { title, headNode } = { ...defaultMeta, ...getMeta?.(pageProps) };
     return (
       <>
         <Head>
@@ -23,6 +23,6 @@ export function Meta<T extends HttpResponse<unknown>>(
         </Head>
         {page}
       </>
-    )
-  }
+    );
+  };
 }

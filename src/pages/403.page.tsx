@@ -2,7 +2,7 @@
 import { HttpResponse } from "@/lib/api";
 import Page403 from "@/components/templates/common/403";
 import { NextPageWithLayout } from "@/lib/next/types";
-import { Meta } from "@/meta";
+import { Meta } from "@/components/meta";
 
 type Props = HttpResponse<any>;
 
