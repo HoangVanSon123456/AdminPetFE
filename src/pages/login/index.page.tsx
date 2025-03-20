@@ -3,7 +3,7 @@ import { HttpResponse } from "@/lib/api";
 import { NextPageWithLayout } from "@/lib/next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Login from "@/components/Pages/Login";
-import { NoneLayout } from "@/components/layouts/NoneLayout";
+import { NoneLayout } from "@/components/Layouts/NoneLayout";
 
 type Props = HttpResponse<any>;
 

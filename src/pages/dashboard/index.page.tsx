@@ -1,6 +1,6 @@
 import { Meta } from "@/components/meta";
 import Dashboard from "@/components/Pages/Dashboard";
-import { BasicLayout } from "@/components/layouts/BasicLayout";
+import { BasicLayout } from "@/components/Layouts/BasicLayout";
 import { HttpResponse } from "@/lib/api";
 import { NextPageWithLayout } from "@/lib/next/types";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";

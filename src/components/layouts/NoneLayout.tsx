@@ -1,4 +1,4 @@
-import { DialogProvider } from "@/components/hooks/dialog/useDialog";
+import { DialogProvider } from "@/components/Hooks/dialog/useDialog";
 import { useAppSelector } from "@/redux/hook";
 import { createTheme } from "@mui/material";
 import NextNProgress from "nextjs-progressbar";
@@ -6,7 +6,7 @@ import { ReactElement } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { RecoilRoot } from "recoil";
 import { getThemeConfig } from "./Theme/themeMUIConfig";
-import ModeTheme from "@/components/layouts/Theme";
+import ModeTheme from "@/components/Layouts/Theme";
 
 const queryClient = new QueryClient();
 

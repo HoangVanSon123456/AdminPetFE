@@ -1,6 +1,6 @@
 import { CoreButton } from "@/components/Form/CoreButton";
 import CoreInput from "@/components/Form/CoreInput";
-import { useDialog } from "@/components/hooks/dialog/useDialog";
+import { useDialog } from "@/components/Hooks/dialog/useDialog";
 import ThreeDotVertical from "public/styles/icons/ThreeDotVertical";
 import { CoreDialog } from "@/components/UI/CoreDialog";
 import { PRIMARY } from "@/helper/colors";

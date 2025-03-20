@@ -2,8 +2,8 @@ import NextNProgress from "nextjs-progressbar";
 import { ReactElement } from "react";
 import { useAppSelector } from "@/redux/hook";
 import { createTheme } from "@mui/material";
-import ModeTheme from "@/components/layouts/Theme";
-import { getThemeConfig } from "@/components/layouts/Theme/themeMUIConfig";
+import ModeTheme from "@/components/Layouts/Theme";
+import { getThemeConfig } from "@/components/Layouts/Theme/themeMUIConfig";
 import { RecoilRoot } from "recoil";
 import dynamic from "next/dynamic";
 
@@ -15,7 +15,7 @@ export const BasicLayout = (page: ReactElement) => {
 
   const Layout = dynamic(
     () =>
-      import("@/components/layouts/Layout/index").then(
+      import("@/components/Layouts/Layout/index").then(
         (component) => component.Layout
       ),
     { ssr: false }

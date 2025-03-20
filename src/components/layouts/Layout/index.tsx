@@ -1,8 +1,9 @@
 import { Box } from "@mui/material";
 import { ReactNode } from "react";
-import Footer from "./components/Footer";
 import Header from "./components/Header";
 import LeftMenu from "./components/LeftMenu";
+import Footer from "./components/Footer";
+
 
 export const Layout = ({ children }: { children: ReactNode }) => {
   return (
