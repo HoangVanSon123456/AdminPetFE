@@ -25,6 +25,6 @@
     "src/**/*",
     "src/components/atoms/*",
     "postcss.module.js"
-  ],
+, "public/styles/icons"  ],
   "exclude": ["node_modules"]
 }

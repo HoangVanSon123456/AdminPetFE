@@ -1,4 +1,4 @@
-import { ReactNode, useCallback } from 'react'
+import { JSX, ReactNode, useCallback } from 'react'
 import { useRecoilValue, useSetRecoilState } from 'recoil'
 import { dialogNode, dialogNode2, isOpenDialog, isOpenDialog2 } from './recoil'
 

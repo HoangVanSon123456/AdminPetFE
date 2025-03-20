@@ -1,5 +1,5 @@
 import { Meta } from "@/components/meta";
-import Dashboard from "@/components/templates/Dashboard";
+import Dashboard from "@/components/Pages/Dashboard";
 import { HttpResponse } from "@/lib/api";
 import { NextPageWithLayout } from "@/lib/next/types";
 

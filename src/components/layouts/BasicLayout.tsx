@@ -6,19 +6,17 @@ import ModeTheme from "@/components/layouts/Theme";
 import { getThemeConfig } from "@/components/layouts/Theme/themeMUIConfig";
 import { RecoilRoot } from "recoil";
 import dynamic from "next/dynamic";
-import { useLayout } from "./useLayout";
 
 export const BasicLayout = (page: ReactElement) => {
   const mainTheme = useAppSelector((state) => state.themeColorData);
   const fontConfig = useAppSelector((state) => state.fontData);
   const themeConfig = getThemeConfig(mainTheme, fontConfig);
   const theme = createTheme(themeConfig);
-  const _ = useLayout();
 
-  const Layout1 = dynamic(
+  const Layout = dynamic(
     () =>
-      import("@/components/layouts/Layout1/index").then(
-        (component) => component.Layout1
+      import("@/components/layouts/Layout/index").then(
+        (component) => component.Layout
       ),
     { ssr: false }
   );
@@ -26,14 +24,14 @@ export const BasicLayout = (page: ReactElement) => {
   return (
     <RecoilRoot>
       <ModeTheme theme={theme}>
-        <Layout1>
+        <Layout>
           <NextNProgress
             color="red"
             height={4}
             options={{ showSpinner: false }}
           />
           {page}
-        </Layout1>
+        </Layout>
       </ModeTheme>
     </RecoilRoot>
   );
