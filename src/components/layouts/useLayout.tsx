@@ -3,6 +3,7 @@ import { useAppDispatch } from "@/redux/hook";
 import { setButtonConfig } from "@/redux/reducer/buttonReducer";
 import { setFontConfig } from "@/redux/reducer/fontReducer";
 import { setThemeColor } from "@/redux/reducer/themeColorReducer";
+import { useEffect } from "react";
 
 export const useLayout = () => {
   const dispatch = useAppDispatch();
@@ -12,13 +13,11 @@ export const useLayout = () => {
 
   /// Config theme =========================== ~! ==========
 
-  const buttonConfigValue = {
-    submitButton: buttonDefaultConfig.submitButton,
-    draftButton: buttonDefaultConfig.draftButton,
-    rejectButton: buttonDefaultConfig.rejectButton,
-    resetButton: buttonDefaultConfig.resetButton,
-  };
-  dispatch(setButtonConfig(buttonConfigValue));
+  useEffect(() => {
+    dispatch(setButtonConfig(buttonDefaultConfig));
+    dispatch(setFontConfig(fontDefaultConfig));
+    dispatch(setThemeColor(themeColorDefaultConfig));
+  }, []);
 
   // if (fontConfig.length > 0) {
   //   const h1 = fontConfig.find((i) => i.type === "H1");

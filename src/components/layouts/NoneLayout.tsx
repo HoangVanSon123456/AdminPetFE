@@ -13,9 +13,7 @@ const queryClient = new QueryClient();
 export const NoneLayout = (page: ReactElement) => {
   const mainTheme = useAppSelector((state) => state.themeColorData);
   const fontConfig = useAppSelector((state) => state.fontData);
-
   const themeConfig = getThemeConfig(mainTheme, fontConfig);
-
   const theme = createTheme(themeConfig);
 
   return (
