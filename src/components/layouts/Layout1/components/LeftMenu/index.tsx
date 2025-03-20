@@ -57,7 +57,9 @@ const LeftMenu = () => {
           {isOpenLeftMenu ? <LeftMenuOpen /> : <LeftMenuClose />}
         </Drawer>
       </Box> */}
-      <LeftMenuOpen />
+      <Box position="sticky" top="0px">
+        <LeftMenuOpen />
+      </Box>
     </div>
   );
 };

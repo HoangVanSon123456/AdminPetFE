@@ -1,18 +1,16 @@
-// import SwitchSystemIcon from '@/components/icons/SwitchSystemIcon'
 import SwitchSystemIcon from "@/components/icons/SwitchSystemIcon";
 import { checkIsMenuOpen } from "@/helper/checkIsMenuOpen";
-import { BLACK, PRIMARY } from "@/helper/colors";
-// import { useAppSelector } from '@/redux/hook'
+import { BLACK } from "@/helper/colors";
+import { useAppSelector } from "@/redux/hook";
 import { MenuPathProps, TRANSLATE } from "@/routes";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { Box, Collapse, Typography } from "@mui/material";
-// import { useTranslation } from 'next-i18next'
+import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import { useCallback, useEffect, useState } from "react";
 import { useSetRecoilState } from "recoil";
 import { isOpenLeftMenuRecoil } from "../../recoil";
-// import { isOpenLeftMenuRecoil } from "../../recoil";
 
 interface Props {
   item: MenuPathProps;
@@ -21,11 +19,10 @@ interface Props {
 }
 
 const MenuItemOpen = (props: Props) => {
-  // const { t } = useTranslation(TRANSLATE.COMMON)
+  const { t } = useTranslation(TRANSLATE.COMMON);
   const { item, setMenuList, setTitleSubMenu } = props;
   const router = useRouter();
 
-  const setIsOpenLeftMenu = useSetRecoilState(isOpenLeftMenuRecoil);
 
   const [open, setOpen] = useState(false);
 
@@ -54,6 +51,10 @@ const MenuItemOpen = (props: Props) => {
 
   const isGroupMenuChecked = groupMenuChecked(item);
 
+  const { firstMainColor: PRIMARY } = useAppSelector(
+    (state) => state.themeColorData
+  );
+
   if (item.subMenu) {
     return (
       <Box
@@ -75,7 +76,7 @@ const MenuItemOpen = (props: Props) => {
         <div className="flex gap-6 items-center h-full w-full pl-5 group-hover:text-[#0078D4]">
           {item.icon}
 
-          <Typography variant="body1">{item.name} </Typography>
+          <Typography variant="body1">{t(item.name)}</Typography>
         </div>
 
         <KeyboardArrowRightIcon fontSize="small" />
@@ -105,7 +106,7 @@ const MenuItemOpen = (props: Props) => {
           <div className="flex gap-6 items-center h-full w-full pl-5 group-hover:text-[#0078D4]">
             {item.icon}
 
-            <Typography variant="body1">{item.name}</Typography>
+            <Typography variant="body1">{t(item.name)}</Typography>
           </div>
 
           <KeyboardArrowDownIcon
@@ -148,7 +149,7 @@ const MenuItemOpen = (props: Props) => {
       >
         {item.icon}
 
-        <Typography variant="body1">{item.name}</Typography>
+        <Typography variant="body1">{t(item.name)}</Typography>
       </Box>
       {/* {["/", "/dashboard"].includes(item.path) && (
         <SwitchSystemIcon

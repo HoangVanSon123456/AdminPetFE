@@ -14,8 +14,6 @@ export const Header = () => {
     >
       <div className="flex items-center gap-10 h-full">
         <SwitchSystem />
-        <div className="w-[1px] h-1/3 bg-slate-300"></div>
-        {/* <Org /> */}
       </div>
 
       <div className="flex items-center gap-6 px-5">

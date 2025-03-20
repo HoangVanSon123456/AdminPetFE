@@ -24,4 +24,9 @@ export const listMenuRoutes: MenuPathProps[] = [
     path: "/dashboard",
     icon: <Dashboard />,
   },
+  {
+    name: "Trang chủ",
+    path: "/dashboard",
+    icon: <Dashboard />,
+  },
 ];

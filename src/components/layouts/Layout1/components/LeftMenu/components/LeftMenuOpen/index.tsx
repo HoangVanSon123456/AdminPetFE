@@ -1,23 +1,20 @@
 import { actionList } from "@/helper/actionList";
-// import { useAppSelector } from "@/redux/hook";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Box, Typography } from "@mui/material";
-// import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
-import { memo, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { MenuCustom } from "../../../MenuCustom";
 import MenuItemOpen from "./MenuItemOpen";
-import { PRIMARY } from "@/helper/colors";
 import { listMenuRoutes } from "@/routes";
+import { useTranslation } from "react-i18next";
+import { useAppSelector } from "@/redux/hook";
+import { findParentWithSubMenu } from "@/helper/checkIsMenuOpen";
 
 const LeftMenuOpen = () => {
-  // const { t } = useTranslation(TRANSLATE.COMMON);
-  // const { firstMainColor: PRIMARY } = useAppSelector(
-  //   (state) => state.themeColorData
-  // )
-  // const warehouseConfigData = useAppSelector(
-  //   (state) => state.configWarehouseData
-  // )
+  const { t } = useTranslation("common");
+  const { firstMainColor: PRIMARY } = useAppSelector(
+    (state) => state.themeColorData
+  );
   const router = useRouter();
 
   const [anchorEl, setAnchorEl] = useState<any>(null);
@@ -26,14 +23,14 @@ const LeftMenuOpen = () => {
 
   const [titleSubMenu, setTitleSubMenu] = useState("");
 
-  // useEffect(() => {
-  //   const parentWithSubMenu = findParentWithSubMenu(router.pathname, menuList)
+  useEffect(() => {
+    const parentWithSubMenu = findParentWithSubMenu(router.pathname, menuList)
 
-  //   if (parentWithSubMenu) {
-  //     setMenuList(parentWithSubMenu.subMenu)
-  //     setTitleSubMenu(parentWithSubMenu.name)
-  //   }
-  // }, [router.pathname])
+    if (parentWithSubMenu) {
+      setMenuList(parentWithSubMenu.subMenu)
+      setTitleSubMenu(parentWithSubMenu.name)
+    }
+  }, [router.pathname])
 
   return (
     <Box className="relative flex flex-col h-full scale-100">
@@ -49,7 +46,7 @@ const LeftMenuOpen = () => {
           }}
           onClick={(e) => setAnchorEl(e.currentTarget)}
         >
-          {/* {t("btn.add")} */} Thêm mới
+          {t("btn.add")}
         </button>
 
         <MenuCustom
@@ -91,11 +88,10 @@ const LeftMenuOpen = () => {
                 color: PRIMARY,
               }}
             >
-              {/* {t(titleSubMenu)} */} titleSubMenu
+              {t(titleSubMenu)}
             </Typography>
           </div>
         )}
-
         {menuList.map((item, index) => {
           return (
             <MenuItemOpen
