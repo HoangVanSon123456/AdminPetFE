@@ -7,6 +7,7 @@ import { createWrapper } from "next-redux-wrapper";
 import { appWithTranslation } from "next-i18next";
 import { compose } from "redux";
 import { Provider } from "react-redux";
+import { ToastContainer } from "react-toastify";
 
 let persistor = persistStore(store);
 
@@ -18,6 +19,18 @@ function App({ Component, pageProps, ...rest }: AppPropsWithLayout) {
     getMeta(
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
+          <ToastContainer
+            containerId="apus-toast"
+            position="top-center"
+            autoClose={3000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            draggable
+            pauseOnHover
+            limit={3}
+          />
           <Component {...pageProps} />
         </PersistGate>
       </Provider>,

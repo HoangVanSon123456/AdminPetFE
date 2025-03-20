@@ -13,6 +13,7 @@ import { Box, ButtonBase, Link, Typography } from "@mui/material";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useLogin } from "./useLogin";
 // import ChangePasswordForm from './components/ChangePasswordForm'
 // import ForgotPasswordForm from './components/ForgotPasswordForm'
 // import useChangePassword from './hooks/useChangePassword'
@@ -22,19 +23,19 @@ const Login = () => {
   const { t } = useTranslation(TRANSLATE.COMMON);
   const dispatch = useAppDispatch();
 
-  const [userName, setUserName] = useState<any>();
+  const [email, setEmail] = useState<any>();
   const [forgotStep, setForgotStep] = useState(0);
   // const { getOtp, otp, handleChangePassword } = useChangePassword()
 
   const formContext = useFormCustom<any>({
     defaultValues: {
-      username: "",
+      email: "",
       password: "",
     },
   });
 
   const { handleSubmit, control } = formContext;
-  // const { loading, loginAccount } = useLogin()
+  const { loading, loginAccount } = useLogin();
 
   // useEffect(() => {
   //   const logoutAccount = async () => {
@@ -83,7 +84,7 @@ const Login = () => {
           </Box>
 
           <form
-            // onSubmit={handleSubmit(loginAccount)}
+            onSubmit={handleSubmit(loginAccount)}
             className="flex flex-col w-full h-full p-25 justify-between"
           >
             <Box className="flex flex-col">
@@ -94,7 +95,7 @@ const Login = () => {
               <CoreInput
                 control={control}
                 className="mt-20"
-                name="username"
+                name="email"
                 label={t("form.mail.label")}
                 placeholder={t("form.mail.placeholder")}
                 rules={{ required: t("common:validation.required") }}
