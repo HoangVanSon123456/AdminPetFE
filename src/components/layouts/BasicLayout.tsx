@@ -6,6 +6,9 @@ import ModeTheme from "@/components/Layouts/Theme";
 import { getThemeConfig } from "@/components/Layouts/Theme/themeMUIConfig";
 import { RecoilRoot } from "recoil";
 import dynamic from "next/dynamic";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 export const BasicLayout = (page: ReactElement) => {
   const mainTheme = useAppSelector((state) => state.themeColorData);
@@ -22,17 +25,19 @@ export const BasicLayout = (page: ReactElement) => {
   );
 
   return (
-    <RecoilRoot>
-      <ModeTheme theme={theme}>
-        <Layout>
-          <NextNProgress
-            color="red"
-            height={4}
-            options={{ showSpinner: false }}
-          />
-          {page}
-        </Layout>
-      </ModeTheme>
-    </RecoilRoot>
+    <QueryClientProvider client={queryClient}>
+      <RecoilRoot>
+        <ModeTheme theme={theme}>
+          <Layout>
+            <NextNProgress
+              color="red"
+              height={4}
+              options={{ showSpinner: false }}
+            />
+            {page}
+          </Layout>
+        </ModeTheme>
+      </RecoilRoot>
+    </QueryClientProvider>
   );
 };

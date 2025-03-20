@@ -5,8 +5,8 @@ import NextNProgress from "nextjs-progressbar";
 import { ReactElement } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { RecoilRoot } from "recoil";
-import { getThemeConfig } from "./Theme/themeMUIConfig";
 import ModeTheme from "@/components/Layouts/Theme";
+import { getThemeConfig } from "./Theme/themeMUIConfig";
 
 const queryClient = new QueryClient();
 
@@ -17,19 +17,19 @@ export const NoneLayout = (page: ReactElement) => {
   const theme = createTheme(themeConfig);
 
   return (
-    // <QueryClientProvider client={queryClient}>
-    <RecoilRoot>
-      <ModeTheme theme={theme}>
-        <>
-          <NextNProgress
-            color="red"
-            height={4}
-            options={{ showSpinner: false }}
-          />
-          <DialogProvider>{page}</DialogProvider>
-        </>
-      </ModeTheme>
-    </RecoilRoot>
-    // </QueryClientProvider>
+    <QueryClientProvider client={queryClient}>
+      <RecoilRoot>
+        <ModeTheme theme={theme}>
+          <>
+            <NextNProgress
+              color="red"
+              height={4}
+              options={{ showSpinner: false }}
+            />
+            <DialogProvider>{page}</DialogProvider>
+          </>
+        </ModeTheme>
+      </RecoilRoot>
+    </QueryClientProvider>
   );
 };
