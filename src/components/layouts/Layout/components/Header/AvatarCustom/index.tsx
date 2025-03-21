@@ -1,4 +1,4 @@
-import CoreLoading from "@/components/UI/CoreLoading";
+import CoreLoading from "@/components/atoms/CoreLoading";
 import { logoutAccount } from "@/config/axios";
 import {
   BACK_GROUND,

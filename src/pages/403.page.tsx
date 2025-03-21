@@ -1,6 +1,6 @@
 // import { NoneLayout } from "@/components/layouts/WrapLayout/NoneLayout";
 import { HttpResponse } from "@/lib/api";
-import Page403 from "@/components/Pages/common/403";
+import Page403 from "@/components/templates/common/403";
 import { NextPageWithLayout } from "@/lib/next/types";
 import { Meta } from "@/components/meta";
 

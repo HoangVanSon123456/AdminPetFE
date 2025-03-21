@@ -1,5 +1,5 @@
 import PlusIcon from "public/styles/icons/PlusIcon";
-import { DialogTable } from "@/components/UI/CoreTable/components/DialogTable";
+import { DialogTable } from "@/components/atoms/CoreTable/components/DialogTable";
 import { useDialog } from "@/components/Hooks/dialog/useDialog";
 
 type Props = {

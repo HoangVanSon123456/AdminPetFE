@@ -1,6 +1,6 @@
-import { CoreButton } from "@/components/Form/CoreButton";
-import CoreInput from "@/components/Form/CoreInput";
-import RegisterPanel from "@/components/UI/RegisterPanel";
+import { CoreButton } from "@/components/atoms/CoreButton";
+import CoreInput from "@/components/atoms/CoreInput";
+import RegisterPanel from "@/components/ui/RegisterPanel";
 // import LanguageButton from '@/components/templates/Login/components/LanguageButton'
 // import { getJtiToken, removeCmsToken } from '@/config/token'
 import { WHITE } from "@/helper/colors";

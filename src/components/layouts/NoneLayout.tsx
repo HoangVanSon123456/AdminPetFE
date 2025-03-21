@@ -5,7 +5,7 @@ import NextNProgress from "nextjs-progressbar";
 import { ReactElement } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { RecoilRoot } from "recoil";
-import ModeTheme from "@/components/Layouts/Theme";
+import ModeTheme from "@/components/layouts/Theme";
 import { getThemeConfig } from "./Theme/themeMUIConfig";
 
 const queryClient = new QueryClient();

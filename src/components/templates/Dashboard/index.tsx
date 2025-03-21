@@ -1,6 +1,6 @@
-import { CoreBreadcrumbs } from "@/components/UI/CoreBreadcrumbs";
-import CoreLoading from "@/components/UI/CoreLoading";
-import PageContainer from "@/components/UI/PageContainer";
+import { CoreBreadcrumbs } from "@/components/atoms/CoreBreadcrumbs";
+import CoreLoading from "@/components/atoms/CoreLoading";
+import PageContainer from "@/components/organisms/PageContainer";
 import { DashboardCustomize } from "@mui/icons-material";
 import { IconButton, Typography } from "@mui/material";
 import { useRouter } from "next/router";

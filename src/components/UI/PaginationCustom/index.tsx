@@ -1,6 +1,6 @@
-import CoreInput from "@/components/Form/CoreInput";
+import CoreInput from "@/components/atoms/CoreInput";
 import { TRANSLATE } from "@/routes";
-import { toastError } from "@/components/UI/Toast";
+import { toastError } from "@/components/ui/Toast";
 import KeyboardDoubleArrowLeftIcon from "@mui/icons-material/KeyboardDoubleArrowLeft";
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
 import {

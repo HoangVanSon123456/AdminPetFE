@@ -1,5 +1,5 @@
 import { postLogin } from "@/service/login";
-import { toastError } from "@/components/UI/Toast";
+import { toastError } from "@/components/ui/Toast";
 import { trim } from "lodash";
 import { useRouter } from "next/router";
 import { useState } from "react";

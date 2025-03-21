@@ -1,8 +1,8 @@
-import { CoreButton } from "@/components/Form/CoreButton";
-import CoreInput from "@/components/Form/CoreInput";
+import { CoreButton } from "@/components/atoms/CoreButton";
+import CoreInput from "@/components/atoms/CoreInput";
 import { useDialog } from "@/components/Hooks/dialog/useDialog";
 import ThreeDotVertical from "public/styles/icons/ThreeDotVertical";
-import { CoreDialog } from "@/components/UI/CoreDialog";
+import { CoreDialog } from "@/components/atoms/CoreDialog";
 import { PRIMARY } from "@/helper/colors";
 import { useFormCustom } from "@/lib/form";
 import { useAppDispatch } from "@/redux/hook";

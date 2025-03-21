@@ -1,7 +1,7 @@
 import { layoutType } from "@/components/layouts/MultipleLayouts/layoutTypeRecoil";
-import { ChangeSttColumn } from "@/components/UI/CoreTable/components/ChangeSttColumn";
-import { TableRowEmpty } from "@/components/UI/CoreTable/components/TableRowEmpty";
-import { TableRowLoading } from "@/components/UI/CoreTable/components/TableRowLoading";
+import { ChangeSttColumn } from "@/components/atoms/CoreTable/components/ChangeSttColumn";
+import { TableRowEmpty } from "@/components/atoms/CoreTable/components/TableRowEmpty";
+import { TableRowLoading } from "@/components/atoms/CoreTable/components/TableRowLoading";
 import { BACK_GROUND, WHITE } from "@/helper/colors";
 import { useAppSelector } from "@/redux/hook";
 import { TRANSLATE } from "@/routes";
@@ -19,7 +19,7 @@ import _ from "lodash";
 import { useTranslation } from "next-i18next";
 import { ReactElement, ReactNode } from "react";
 import { useRecoilValue } from "recoil";
-import PaginationCustom from "../PaginationCustom";
+import PaginationCustom from "../../ui/PaginationCustom";
 import { CellContent } from "./components/CellContent";
 
 export type ColumnProps = {

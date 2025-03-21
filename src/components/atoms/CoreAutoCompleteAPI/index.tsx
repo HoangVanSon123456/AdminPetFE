@@ -1,8 +1,8 @@
-import { CoreAutoChip } from "@/components/Form/CoreAutoChip";
+import { CoreAutoChip } from "@/components/atoms/CoreAutoChip";
 import { PAGE_SIZE } from "@/helper/contain";
 import { getPlaceholder } from "@/helper/getPlaceholder";
 import { PageResponse } from "@/service/type";
-import { toastError } from "@/components/UI/Toast";
+import { toastError } from "@/components/ui/Toast";
 import {
   Autocomplete,
   AutocompleteProps,

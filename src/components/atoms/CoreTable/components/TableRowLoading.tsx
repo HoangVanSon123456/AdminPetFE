@@ -1,4 +1,4 @@
-import CoreLoading from "@/components/UI/CoreLoading";
+import CoreLoading from "@/components/atoms/CoreLoading";
 import { TableCell, TableRow } from "@mui/material";
 
 type Props = {
