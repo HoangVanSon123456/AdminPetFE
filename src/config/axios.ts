@@ -1,7 +1,9 @@
 import axios from "axios";
 
-export const axiosInstance = axios.create({
-  baseURL: "http://localhost:4000/api",
+const API_URL_DEV = process.env.API_URL_DEV;
+
+export const authAPI = axios.create({
+  baseURL: API_URL_DEV,
   timeout: 10000, // 10s
   headers: {
     "Content-Type": "application/json",
